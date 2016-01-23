@@ -17,14 +17,14 @@ unique(m$Short.Name)
 ##unique(m$SCC.Level.Three)
 ##[1] Anthracite Coal                                                       
 ##[2] Bituminous/Subbituminous Coal
+##test
 
 ##subset
 x <- subset(m, SCC.Level.Three == "Anthracite Coal" | SCC.Level.Three == "Bituminous/Subbituminous Coal")
 
 
 ##plot
-qplot(year, data=x, facets = type ~., 
-      geom = "histogram", binwidth =1,
+qplot(year, data=x, geom = "histogram", binwidth =1,
       main = "Total Coal Emissions for USA", fill=I("blue"), 
       xlab = "Years", ylab = "Emissions", xlim=c(1997, 2009))
 
